@@ -1,0 +1,21 @@
+      *--------------------------------------------------------*
+      * DESCRIPTION DE L'ENREGISTREMENT DU FICHIER MOUVEMENT   *
+      * FMVTS EN ENTREE DU PROGRAMME                           *
+      *--------------------------------------------------------*
+      *
+       01  WS-ENRG-F-MVTS.
+           05 WS-MVTS-CPTE                   PIC 9(10).
+           05 WS-MVTS-DATE.
+              10 WS-MVTS-ANNEE.
+                 15 WS-MVTS-SS               PIC 9(2).
+                 15 WS-MVTS-AA               PIC 9(2).
+              10 WS-MVTS-MM                  PIC 9(2).
+              10 WS-MVTS-JJ                  PIC 9(2).
+           05 WS-MVTS-CODE                   PIC X.
+              88 RETRAIT                     VALUE 'R'.
+              88 CB                          VALUE 'C'.
+              88 DEPOT                       VALUE 'D'.
+              88 CLOTURE                     VALUE 'K'.
+           05 WS-MVTS-MT                     PIC 9(8)V99.
+           05 FILLER                         PIC X(21)
+                                             VALUE SPACES.

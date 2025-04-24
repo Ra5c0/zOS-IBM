@@ -1,0 +1,25 @@
+      *--------------------------------------------------------*
+      * DESCRIPTION DE L'ENREGISTREMENT DU FICHIER COMPTE FCPTS*
+      * EN SORTIE DU PROGRAMME                                 *
+      *--------------------------------------------------------*
+      *
+       01  WS-ENRG-F-CPTS.
+           05 WS-CPTS-CPTE                     PIC 9(10).
+      *
+           05 WS-CPTS-DCREA.
+               10 WS-CPTS-DCREA-SSAA.
+                  15 WS-CPTS-DCREA-SS          PIC 9(2).
+                  15 WS-CPTS-DCREA-AA          PIC 9(2).
+               10 WS-CPTS-DCREA-MM             PIC 9(2).
+               10 WS-CPTS-DCREA-JJ             PIC 9(2).
+      *
+           05 WS-CPTS-SOLDE                    PIC S9(8)V99.
+      *
+           05 WS-CPTS-DMAJ.
+               10 WS-CPTS-DMAJ-SSAA.
+                  15 WS-CPTS-DMAJ-SS           PIC 9(2).
+                  15 WS-CPTS-DMAJ-AA           PIC 9(2).
+               10 WS-CPTS-DMAJ-MM              PIC 9(2).
+               10 WS-CPTS-DMAJ-JJ              PIC 9(2).
+           05 FILLER                           PIC X(14)
+                                               VALUE SPACES.

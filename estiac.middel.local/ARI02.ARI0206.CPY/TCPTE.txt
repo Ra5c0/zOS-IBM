@@ -1,0 +1,35 @@
+      ******************************************************************
+      * DCLGEN TABLE(TCPTE)                                            *
+      *        LIBRARY(ARI02.ARI0206.CPY(TCPTE))                       *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        NAMES(WS-)                                              *
+      *        QUOTE                                                   *
+      *        DBCSDELIM(NO)                                           *
+      *        COLSUFFIX(YES)                                          *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE TCPTE TABLE
+           ( NUMCPTE                        CHAR(10) NOT NULL,
+             NOMCLI                         CHAR(14) NOT NULL,
+             DCRCPTE                        DATE NOT NULL,
+             SLDCPTE                        DECIMAL(10, 2),
+             DMJCPTE                        DATE NOT NULL
+           ) END-EXEC.
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE TCPTE                              *
+      ******************************************************************
+       01  DCLTCPTE.
+      *                       NUMCPTE
+           10 WS-NUMCPTE           PIC X(10).
+      *                       NOMCLI
+           10 WS-NOMCLI            PIC X(14).
+      *                       DCRCPTE
+           10 WS-DCRCPTE           PIC X(10).
+      *                       SLDCPTE
+           10 WS-SLDCPTE           PIC S9(8)V9(2) USAGE COMP-3.
+      *                       DMJCPTE
+           10 WS-DMJCPTE           PIC X(10).
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 5       *
+      ******************************************************************

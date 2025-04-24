@@ -1,0 +1,139 @@
+       01  ARIM264I.
+           02  FILLER PIC X(12).
+           02  MDATEL    COMP  PIC  S9(4).
+           02  MDATEF    PICTURE X.
+           02  FILLER REDEFINES MDATEF.
+             03 MDATEA    PICTURE X.
+           02  MDATEI  PIC X(10).
+           02  MTERML    COMP  PIC  S9(4).
+           02  MTERMF    PICTURE X.
+           02  FILLER REDEFINES MTERMF.
+             03 MTERMA    PICTURE X.
+           02  MTERMI  PIC X(4).
+           02  MTASKL    COMP  PIC  S9(4).
+           02  MTASKF    PICTURE X.
+           02  FILLER REDEFINES MTASKF.
+             03 MTASKA    PICTURE X.
+           02  MTASKI  PIC X(7).
+           02  MTRANL    COMP  PIC  S9(4).
+           02  MTRANF    PICTURE X.
+           02  FILLER REDEFINES MTRANF.
+             03 MTRANA    PICTURE X.
+           02  MTRANI  PIC X(4).
+           02  MCATEGL    COMP  PIC  S9(4).
+           02  MCATEGF    PICTURE X.
+           02  FILLER REDEFINES MCATEGF.
+             03 MCATEGA    PICTURE X.
+           02  MCATEGI  PIC X(5).
+           02  MLOTD OCCURS 5 TIMES.
+             03  MLOTL    COMP  PIC  S9(4).
+             03  MLOTF    PICTURE X.
+             03  MLOTI  PIC X(79).
+           02  MMSGL    COMP  PIC  S9(4).
+           02  MMSGF    PICTURE X.
+           02  FILLER REDEFINES MMSGF.
+             03 MMSGA    PICTURE X.
+           02  MMSGI  PIC X(79).
+           02  MPF7L    COMP  PIC  S9(4).
+           02  MPF7F    PICTURE X.
+           02  FILLER REDEFINES MPF7F.
+             03 MPF7A    PICTURE X.
+           02  MPF7I  PIC X(17).
+           02  MPF8L    COMP  PIC  S9(4).
+           02  MPF8F    PICTURE X.
+           02  FILLER REDEFINES MPF8F.
+             03 MPF8A    PICTURE X.
+           02  MPF8I  PIC X(16).
+       01  ARIM264O REDEFINES ARIM264I.
+           02  FILLER PIC X(12).
+           02  FILLER PICTURE X(3).
+           02  MDATEO  PIC X(10).
+           02  FILLER PICTURE X(3).
+           02  MTERMO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  MTASKO  PIC X(7).
+           02  FILLER PICTURE X(3).
+           02  MTRANO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  MCATEGO  PIC X(5).
+           02  DFHMS1 OCCURS 5 TIMES.
+             03  FILLER PICTURE X(2).
+             03  MLOTA    PICTURE X.
+             03  MLOTO  PIC X(79).
+           02  FILLER PICTURE X(3).
+           02  MMSGO  PIC X(79).
+           02  FILLER PICTURE X(3).
+           02  MPF7O  PIC X(17).
+           02  FILLER PICTURE X(3).
+           02  MPF8O  PIC X(16).
+       01  ARIMFOUI REDEFINES ARIM264I.
+           02  FILLER PIC X(12).
+           02  MDATEFL    COMP  PIC  S9(4).
+           02  MDATEFF    PICTURE X.
+           02  FILLER REDEFINES MDATEFF.
+             03 MDATEFA    PICTURE X.
+           02  MDATEFI  PIC X(10).
+           02  MTERMFL    COMP  PIC  S9(4).
+           02  MTERMFF    PICTURE X.
+           02  FILLER REDEFINES MTERMFF.
+             03 MTERMFA    PICTURE X.
+           02  MTERMFI  PIC X(4).
+           02  MTASKFL    COMP  PIC  S9(4).
+           02  MTASKFF    PICTURE X.
+           02  FILLER REDEFINES MTASKFF.
+             03 MTASKFA    PICTURE X.
+           02  MTASKFI  PIC X(7).
+           02  MTRANFL    COMP  PIC  S9(4).
+           02  MTRANFF    PICTURE X.
+           02  FILLER REDEFINES MTRANFF.
+             03 MTRANFA    PICTURE X.
+           02  MTRANFI  PIC X(4).
+           02  MCODEFL    COMP  PIC  S9(4).
+           02  MCODEFF    PICTURE X.
+           02  FILLER REDEFINES MCODEFF.
+             03 MCODEFA    PICTURE X.
+           02  MCODEFI  PIC X(5).
+           02  MCFOUFL    COMP  PIC  S9(4).
+           02  MCFOUFF    PICTURE X.
+           02  FILLER REDEFINES MCFOUFF.
+             03 MCFOUFA    PICTURE X.
+           02  MCFOUFI  PIC X(5).
+           02  MRSOCFL    COMP  PIC  S9(4).
+           02  MRSOCFF    PICTURE X.
+           02  FILLER REDEFINES MRSOCFF.
+             03 MRSOCFA    PICTURE X.
+           02  MRSOCFI  PIC X(30).
+           02  MADCMDFL    COMP  PIC  S9(4).
+           02  MADCMDFF    PICTURE X.
+           02  FILLER REDEFINES MADCMDFF.
+             03 MADCMDFA    PICTURE X.
+           02  MADCMDFI  PIC X(40).
+           02  MADFACFL    COMP  PIC  S9(4).
+           02  MADFACFF    PICTURE X.
+           02  FILLER REDEFINES MADFACFF.
+             03 MADFACFA    PICTURE X.
+           02  MADFACFI  PIC X(40).
+       01  ARIMFOUO REDEFINES ARIMFOUI.
+           02  FILLER PIC X(12).
+           02  FILLER PICTURE X(3).
+           02  MDATEFO  PIC X(10).
+           02  FILLER PICTURE X(3).
+           02  MTERMFO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  MTASKFO  PIC X(7).
+           02  FILLER PICTURE X(3).
+           02  MTRANFO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  MCODEFO  PIC X(5).
+           02  FILLER PICTURE X(3).
+           02  MCFOUFO  PIC X(5).
+           02  FILLER PICTURE X(3).
+           02  MRSOCFO  PIC X(30).
+           02  FILLER PICTURE X(3).
+           02  MADCMDFO  PIC X(40).
+           02  FILLER PICTURE X(3).
+           02  MADFACFO  PIC X(40).
+       01  ARIMHP4I REDEFINES ARIM264I.
+           02  FILLER PIC X(12).
+       01  ARIMHP4O REDEFINES ARIMHP4I.
+           02  FILLER PIC X(12).

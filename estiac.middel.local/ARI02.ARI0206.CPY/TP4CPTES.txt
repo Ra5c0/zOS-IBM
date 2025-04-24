@@ -1,0 +1,25 @@
+      *--------------------------------------------------------*
+      * DEFINITION DES ENREGISTREMENTS DU FICHIER COMPTE CPTES *
+      * EN ENTREE-SORTIE DU PROGRAMME                          *
+      *--------------------------------------------------------*
+      *
+       01  WS-ENRG-F-CPTES.
+           05  WS-CPTES-CPTE                  PIC 9(10).
+      *
+           05  WS-CPTES-DCREA.
+               10  WS-CPTES-DCREA-SSAA.
+                   15  WS-CPTES-DCREA-SS      PIC 9(2).
+                   15  WS-CPTES-DCREA-AA      PIC 9(2).
+               10  WS-CPTES-DCREA-MM          PIC 9(2).
+               10  WS-CPTES-DCREA-JJ          PIC 9(2).
+      *
+           05  WS-CPTES-SOLDE                 PIC S9(8)V99.
+      *
+           05  WS-CPTES-DMAJ.
+               10  WS-CPTES-DMAJ-SSAA.
+                   15 WS-CPTES-DMAJ-SS        PIC 9(2).
+                   15 WS-CPTES-DMAJ-AA        PIC 9(2).
+               10  WS-CPTES-DMAJ-MM           PIC 9(2).
+               10  WS-CPTES-DMAJ-JJ           PIC 9(2).
+           05  FILLER                         PIC X(14)
+                                              VALUE SPACES.

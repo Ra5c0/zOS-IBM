@@ -1,0 +1,24 @@
+      *--------------------------------------------------------*
+      * DEFINITION DES ENREGISTREMENTS DU FICHIER DEMANDE      *
+      *--------------------------------------------------------*
+      *
+       01  WS-ENRG-DEMANDE.
+           88  EOF-DEMANDE                      VALUE '$$$'.
+           05  WS-DEM-TYP                       PIC X.
+               88  TYPE-A                       VALUE 'A'.
+               88  TYPE-B                       VALUE 'B'.
+           05  FILLER                           PIC X(79).
+      *
+       01  WS-ENRG-A REDEFINES WS-ENRG-DEMANDE.
+           05  FILLER                           PIC X.
+           05  WS-DEM-NOM                       PIC X(14).
+           05  WS-DEM-CPT-DEB                   PIC 9(10).
+           05  WS-DEM-CPT-FIN                   PIC 9(10).
+           05  FILLER                           PIC X(45).
+      *
+       01  WS-ENRG-B REDEFINES WS-ENRG-DEMANDE.
+           05  FILLER                           PIC X.
+           05  FILLER                           PIC X(14).
+           05  WS-DEM-CLI-DEB                   PIC X(20).
+           05  WS-DEM-CLI-FIN                   PIC X(20).
+           05  FILLER                           PIC X(25).

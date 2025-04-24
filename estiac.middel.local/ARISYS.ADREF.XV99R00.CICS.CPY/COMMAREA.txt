@@ -1,0 +1,40 @@
+      *----------------------------------------------------------------*
+      * DESCRIPTION DE LA ZONE DE COMMUNICATION COBOL-CICS             *
+      *----------------------------------------------------------------*
+       01  WS-COMMAREA.
+           05 WS-AIG                   PIC 9.
+              88 LOOP-MENU                VALUE 0.
+              88 LOOP-SPG                 VALUE 1 THRU 6.
+           05 WS-TAFF                  PIC X.
+              88 INIT-TRT                 VALUE LOW-VALUE.
+              88 AFF-MAP                  VALUE 'M'.
+              88 AFF-AIDE                 VALUE 'A'.
+              88 CONFIRMATION             VALUE 'C'.
+              88 AFF-FOU                  VALUE 'F'.
+              88 LOCK-MOD                 VALUE 'L'.
+      *       88 AFF-CAT                  VALUE 'C'.
+      *
+      *----------------------------------------------------------------*
+      * ZONE MODIFIABLE SELON LES BESOINS (TAILLE MAX. = 4094 OCTETS)  *
+      *----------------------------------------------------------------*
+      *
+           05 WS-DATE                  PIC X(10).
+           05 WS-COMMAREA-ENR.
+              10 WS-COMMAREA-CODE      PIC X(5).
+              10 WS-COMMAREA-LIBEL     PIC X(20).
+              10 WS-COMMAREA-CATEG     PIC X(5).
+              10 WS-COMMAREA-FOU       PIC 9(5).
+              10 WS-COMMAREA-DELAI     PIC 99.
+              10 WS-COMMAREA-QTE       PIC 9(6).
+              10 WS-COMMAREA-ALERT     PIC 9(5).
+              10 WS-COMMAREA-NB-LOT    PIC 9.
+              10 WS-COMMAREA-TLOT.
+                 15 WS-COMMAREA-LOT        OCCURS 5.
+                    20 WS-COMMAREA-LOT-NUM PIC X(6).
+                    20 WS-COMMAREA-LOT-QTE PIC 9(5).
+                    20 WS-COMMAREA-LOT-PXU PIC 9(5)V99.
+              10 WS-FILLER             PIC X.
+      *
+      * GESTION DES COMPTEURS DE PAGE BROWSING
+           05 WS-CPT-PAGE              PIC S9(4) COMP.
+           05 WS-CPT-PAGE-MAX          PIC S9(4) COMP.

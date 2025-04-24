@@ -1,0 +1,32 @@
+      ******************************************************************
+      * DCLGEN TABLE(TCPTES)                                           *
+      *        LIBRARY(ARI02.ARI0206.CPY(TCPTES))                      *
+      *        ACTION(REPLACE)                                         *
+      *        LANGUAGE(COBOL)                                         *
+      *        NAMES(WS-)                                              *
+      *        QUOTE                                                   *
+      *        DBCSDELIM(NO)                                           *
+      *        COLSUFFIX(YES)                                          *
+      * ... IS THE DCLGEN COMMAND THAT MADE THE FOLLOWING STATEMENTS   *
+      ******************************************************************
+           EXEC SQL DECLARE TCPTES TABLE
+           ( NUMCPTES                       CHAR(10) NOT NULL,
+             DCRCPTES                       DATE NOT NULL,
+             SLDCPTES                       DECIMAL(10, 2),
+             DMJCPTES                       DATE NOT NULL
+           ) END-EXEC.
+      ******************************************************************
+      * COBOL DECLARATION FOR TABLE TCPTES                             *
+      ******************************************************************
+       01  DCLTCPTES.
+      *                       NUMCPTES
+           10 WS-NUMCPTES          PIC X(10).
+      *                       DCRCPTES
+           10 WS-DCRCPTES          PIC X(10).
+      *                       SLDCPTES
+           10 WS-SLDCPTES          PIC S9(8)V9(2) USAGE COMP-3.
+      *                       DMJCPTES
+           10 WS-DMJCPTES          PIC X(10).
+      ******************************************************************
+      * THE NUMBER OF COLUMNS DESCRIBED BY THIS DECLARATION IS 4       *
+      ******************************************************************

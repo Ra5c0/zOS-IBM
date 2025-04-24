@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription xmlns="http://www.metrixware.com/cobos/xsd/2.2"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.metrixware.com/cobos/xsd/2.2
+ http://www.metrixware.com/cobos/xsd/2.2/cobos.xsd">
+  <name>ARI02.ARI0206.SRC</name>
+  <comment>default cobos project properties file</comment>
+  <maturity>0</maturity>
+  <sourceFormat>F</sourceFormat>
+  <maxLengthLine>80</maxLengthLine>
+  <defaultLanguage>cobol</defaultLanguage>
+  <defaultSourceType>program</defaultSourceType>
+  <hostSystem>ZOS</hostSystem>
+  <hostSystemName>estiac.middel.local</hostSystemName> 
+  <projects></projects>
+  <buildSpec>
+    <buildOption>-fcics -std=mvs</buildOption>
+  </buildSpec>
+  <copys>
+    <copy id="SYSLIB">
+      <itemcopy path="$WORKSPACE$">estiac.middel.local/ARI02.ARI0206.SRC</itemcopy>
+    </copy>
+  </copys>
+</projectDescription>

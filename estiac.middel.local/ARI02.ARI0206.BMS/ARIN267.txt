@@ -1,0 +1,188 @@
+ARIN267  DFHMSD TYPE=&SYSPARM,MODE=INOUT,LANG=COBOL,TIOAPFX=YES
+* *********************************************************************
+* MAP SUPPRESSION
+* *********************************************************************
+* ARIM267 MAP DE TAILLE 24X80 (NB LIGNES X NB COLONNES)
+ARIM267  DFHMDI SIZE=(24,80),                                          *
+               LINE=1,                                                 *
+               COLUMN=1,                                               *
+               CTRL=(FREEKB,FRSET)
+* TEXTE EN LIGNE 1 COLONNE 1, DE LONGUEUR 45 CARACTERES
+         DFHMDF POS=(01,01),                                           *
+               LENGTH=45,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='FORMATION CICS -            ESTIAC INSTITUT  '
+* TEXTE EN LIGNE 1 COLONNE 62, DE LONGUEUR 6 CARACTERES
+         DFHMDF POS=(01,62),                                           *
+               LENGTH=06,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='DATE :'
+* CHAMP CONTENANT UNE VARIABLE AFFICHANT LA DATE DU JOUR
+MDATE    DFHMDF POS=(01,69),                                           *
+               LENGTH=10,                                              *
+               ATTRB=(ASKIP,BRT)
+* TEXTE EN LIGNE 2 COLONNE 20,DE LONGUEUR 36 CARACTERES
+         DFHMDF POS=(02,20),                                           *
+               LENGTH=36,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='===================================='
+* TEXTE EN LIGNE 2 COLONNE 58, DE LONGUEUR 10 CARACTERES
+         DFHMDF POS=(02,58),                                           *
+               LENGTH=10,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='TERMINAL :'
+* VARIABLE AFFICHANT LE TERMINAL DE L'UTILISATEUR
+MTERM    DFHMDF POS=(02,69),                                           *
+               LENGTH=04,                                              *
+               ATTRB=(ASKIP,BRT)
+* TEXTE EN LIGNE 3 COLONNE 61, DE LONGUEUR 7 CARACTERES
+         DFHMDF POS=(03,61),                                           *
+               LENGTH=07,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='TACHE :'
+* VARIABLE AFFICHANT LE NUMERO DE TACHE DE L'APPLICATION GESTART
+MTASK    DFHMDF POS=(03,69),                                           *
+               LENGTH=07,                                              *
+               ATTRB=(ASKIP,BRT)
+* TEXTE EN LIGNE 4 COLONNE 59, DE LONGUEUR 9 CARACTERES
+         DFHMDF POS=(04,59),                                           *
+               LENGTH=09,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='TRANSID :'
+* VARIABLE AFFICHANT LE NUMERO DE TRANSACTION
+MTRAN    DFHMDF POS=(04,69),                                           *
+               LENGTH=04,                                              *
+               ATTRB=(ASKIP,BRT)
+* TEXTE EN LIGNE 5 COLONNE 21, DE LONGUEUR 40 CARACTERES
+         DFHMDF POS=(05,21),                                           *
+               LENGTH=40,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='APPLICATION GESTART - SUPPRESION ARTICLE'
+* TEXTE EN LIGNE 6 COLONNE 21, DE LONGUEUR 40 CARACTERES
+         DFHMDF POS=(06,21),                                           *
+               LENGTH=40,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='----------------------------------------'
+* TEXTE EN LIGNE 10 COLONNE 20, DE LONGUEUR 40 CARACTERES
+         DFHMDF POS=(10,20),                                           *
+               LENGTH=40,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='SAISIR LE CODE DE L''ARTICLE A SUPPRIMER'
+* TEXTE EN LIGNE 12 COLONNE 35, DE LONGUEUR 9 CARACTERES
+         DFHMDF POS=(12,35),                                           *
+               LENGTH=09,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='+-------+'
+* TEXTE EN LIGNE 13 COLONNE 35, DE LONGUEUR 1 CARACTERE
+         DFHMDF POS=(13,35),                                           *
+               LENGTH=01,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='!'
+* MCHOIX   DFHMDF POS=(13,37),
+*                LENGTH=05,
+*                ATTRB=(BRT,IC)
+* CHAMP PERMETTANT A L'UTILISATEUR D'INSCRIRE LE CODE D'ARTICLE
+* A SUPPRIMER
+MCODE    DFHMDF POS=(13,37),                                           *
+               LENGTH=05,                                              *
+               ATTRB=(BRT,IC)
+* TEXTE EN LIGNE 13 COLONNE 43, DE LONGUEUR 1 CARACTERES
+         DFHMDF POS=(13,43),                                           *
+               LENGTH=01,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='!'
+* TEXTE EN LIGNE 14 COLONNE 35, DE LONGUEUR 9 CARACTERES
+         DFHMDF POS=(14,35),                                           *
+               LENGTH=09,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='+-------+'
+* TEXTE EN LIGNE 21 COLONNE 1, DE LONGUEUR 9 CARACTERES
+         DFHMDF POS=(21,01),                                           *
+               LENGTH=09,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='MESSAGE :'
+* VARIABLE AFFICHANT LE MESSAGE D'ERREUR SI ANOMALIE
+MMSG     DFHMDF POS=(22,01),                                           *
+               LENGTH=79,                                              *
+               ATTRB=(ASKIP,BRT)
+* TEXTE EN LIGNE 24 COLONNE 5, DE LONGUEUR 72 CARACTERES
+         DFHMDF POS=(24,05),                                           *
+               LENGTH=72,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='ENTREE => DEMANDE DE SUPPRESSION / CONFIRMATION*
+               PF1 => AIDE - PF3 => MENU'
+* *********************************************************************
+* MAP AIDE
+* *********************************************************************
+* ARIMHP7 MAP DE TAILLE 24X80 (NB LIGNES X NB COLONNES)
+ARIMHP7  DFHMDI SIZE=(24,80),                                          *
+               LINE=1,                                                 *
+               COLUMN=1,                                               *
+               CTRL=(FREEKB,FRSET)
+* TEXTE EN LIGNE 1 COLONNE 1, DE LONGUEUR 45 CARACTERES
+         DFHMDF POS=(01,01),                                           *
+               LENGTH=45,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='FORMATION CICS -             ESTIAC INSTITUT '
+* TEXTE EN LIGNE 2 COLONNE 20,DE LONGUEUR 36 CARACTERES
+         DFHMDF POS=(02,20),                                           *
+               LENGTH=36,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='===================================='
+* TEXTE EN LIGNE 5 COLONNE 9, DE LONGUEUR 57 CARACTERES
+         DFHMDF POS=(05,09),                                           *
+               LENGTH=57,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='APPLICATION GESTART - SUPPRESSION ARTICLE - AID*
+               E EN LIGNE'
+* TEXTE EN LIGNE 6 COLONNE 9, DE LONGUEUR 57 CARACTERES
+         DFHMDF POS=(06,09),                                           *
+               LENGTH=57,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='-----------------------------------------------*
+               ----------'
+* TEXTE EN LIGNE 9 COLONNE 3, DE LONGUEUR 70 CARACTERES
+         DFHMDF POS=(09,03),                                           *
+               LENGTH=70,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='INITIALISER LE CHAMP CODE AVANT CHAQUE DEMANDE *
+               DE SUPPRESSION (ENTREE)'
+* TEXTE EN LIGNE 10 COLONNE 3, DE LONGUEUR 57 CARACTERES
+         DFHMDF POS=(10,03),                                           *
+               LENGTH=57,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='TOUTE DEMANDE DE SUPPRESSION DOIT ETRE CONFIRME*
+               E (ENTREE)'
+* TEXTE EN LIGNE 16 COLONNE 3, DE LONGUEUR 68 CARACTERES
+         DFHMDF POS=(16,03),                                           *
+               LENGTH=69,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='LES TOUCHES FONCTIONS SUIVANTES SONT ACTIVES LO*
+               RS D''UNE SUPPRESSION'
+* TEXTE EN LIGNE 17 COLONNE 4, DE LONGUEUR 68 CARACTERES
+         DFHMDF POS=(17,04),                                           *
+               LENGTH=68,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='ENTREE ==> ENVOI DU CODE ARTICLE SAISI / CONFIR*
+               MATION DE SUPPRESSION'
+* TEXTE EN LIGNE 18 COLONNE 4, DE LONGUEUR 52 CARACTERES
+         DFHMDF POS=(18,04),                                           *
+               LENGTH=53,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='PF1    ==> AFFICHAGE DE L''AIDE CONTEXTUELLE EN*
+                LIGNE'
+* TEXTE EN LIGNE 19 COLONNE 2, DE LONGUEUR 62 CARACTERES
+         DFHMDF POS=(19,04),                                           *
+               LENGTH=62,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='PF3    ==> RETOUR AU MENU PRINCIPAL / CONFIRMAT*
+               ION SUPPRESSION'
+* TEXTE EN LIGNE 24 COLONNE 4, DE LONGUEUR 71 CARACTERES
+         DFHMDF POS=(24,04),                                           *
+               LENGTH=71,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='APPUYER SUR N''IMPORTE QUELLE TOUCHE FONCTION P*
+               OUR REVENIR AU TRAITEMENT'
+* FIN DU BMS
+         DFHMSD TYPE=FINAL
+         END

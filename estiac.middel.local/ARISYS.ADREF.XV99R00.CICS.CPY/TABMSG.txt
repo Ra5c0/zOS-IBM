@@ -1,0 +1,120 @@
+      *----------------------------------------------------------------*
+      * DESCRIPTION DE LA TABLE DES MESSAGES                           *
+      *----------------------------------------------------------------*
+      *
+       01  WS-TABMSG.
+           05  FILLER                        PIC X(79)
+               VALUE 'TOUCHE FONCTION INVALIDE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'EFFACEMENT D''ECRAN NON AUTORISE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'SAISIR UN CODE ARTICLE AVANT D''UTILISER LA TOUCHE
+      -    ' ENTREE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'DEBUT DE FICHIER, TOUCHE PF7 INVALIDE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'FIN DE FICHIER, TOUCHE PF8 INVALIDE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CODE ARTICLE NON RENSEIGNE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CHAMP (POINTE PAR LE CURSEUR) NON RENSEIGNE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CHAMP (POINTE PAR LE CURSEUR) NON NUMERIQUE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'QUANTITE EN STOCK DIFFERENTE DE LA SOMME DES QUANT
+      -    'ITES PAR LOT'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CHAMP NOMBRE DE LOTS DIFFERENT DU NOMBRE DE LOTS S
+      -    'AISIS'.
+           05  FILLER                        PIC X(79)
+               VALUE 'SAISIE DE CREATION VALIDEE - ENTREE => CONFIRMATIO
+      -    'N PF3 => ANNULATION'.
+           05  FILLER                        PIC X(79)
+               VALUE 'FOURNISSEUR INDENTIFIE INEXISTANT'.
+           05  FILLER                        PIC X(79)
+               VALUE 'L''ENREGISTREMENT A CREER EXISTE DEJA'.
+           05  FILLER                        PIC X(79)
+               VALUE 'ENREGISTREMENT CREE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CREATION ANNULEE PAR L''OPERATEUR'.
+           05  FILLER                        PIC X(79)
+               VALUE 'DEMANDE DE MODIFICATION NON SAISIE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'COMMANDE DIFFERENTE DE A (AJOUT) OU DE R (RETRAIT)
+      -    ''.
+           05  FILLER                        PIC X(79)
+               VALUE 'ARTICLE EN COURS DE MODIFICATION ==> ATTENDRE ET R
+      -    'ECONFIRMER LA MAJ'.
+           05  FILLER                        PIC X(79)
+               VALUE 'ARTICLE SUPPRIME ==> MISE A JOUR ANNULEE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'SAISIE DE MODIF. VALIDEE - ENTREE => CONFIRMATION
+      -    'PF3 => ANNULATION'.
+           05  FILLER                        PIC X(79)
+               VALUE 'ENREGISTREMENT A MODIFIER INEXISTANT'.
+           05  FILLER                        PIC X(79)
+               VALUE 'MODIFICATION ABANDONNE PAR L''OPERATEUR'.
+           05  FILLER                        PIC X(79)
+               VALUE 'COMMANDE INVALIDE (LOT INEXISTANT)'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CHAMP CHOIX NON RENSEIGNE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CHOIX INVALIDE (DOIT ETRE COMPRIS ENTRE 1 ET 6)'.
+           05  FILLER                        PIC X(79)
+               VALUE 'FIN DE TRANSACTION, EFFACER L''ECRAN POUR LANCER U
+      -    'NE AUTRE TRANSACTION'.
+           05  FILLER                        PIC X(79)
+               VALUE 'ENREGISTREMENT RECHERCHE INEXISTANT'.
+           05  FILLER                        PIC X(79)
+               VALUE 'ENREGISTREMENT A SUPPRIMER INEXISTANT'.
+           05  FILLER                        PIC X(79)
+               VALUE 'ENTREE => CONFIRMATION - PF3 ANNULATION DE LA DEMA
+      -    'NDE DE SUPPRESSION'.
+           05  FILLER                        PIC X(79)
+               VALUE 'ENREGISTREMENT SUPPRIME'.
+           05  FILLER                        PIC X(79)
+               VALUE 'SUPPRESSION ABANDONNEE PAR L''OPERATEUR'.
+           05  FILLER                        PIC X(79)
+               VALUE 'DEBUT DE CATEGORIE, TOUCHE PF7 INVALIDE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'FIN DE CATEGORIE, TOUCHE PF8 INVALIDE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CODE CATEGORIE NON RENSEIGNE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CATEGORIE INEXISTANTE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CURSEUR MAL POSITIONNE POUR OBTENIR DES INFORMATIO
+      -    'NS FOURNISSEUR'.
+           05  FILLER                        PIC X(79)
+               VALUE 'PAGINATION ARRIERE INACTIVE, TOUCHE PF7 INVALIDE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'PAGINATION AVANT INACTIVE, TOUCHE PF8 INVALIDE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'DEBUT ET FIN DE CATEGORIE, PF7 ET PF8 INVALIDES'.
+           05  FILLER                        PIC X(79)
+               VALUE 'RENSEIGNER LES CHAMPS POUR CREER UN NOUVEL ARTICLE
+      -    ''.
+           05  FILLER                        PIC X(79)
+               VALUE 'AUCUN CHAMP N''A ETE RENSEIGNE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'LE NOMBRE DE LOTS DOIT ETRE COMPRIS 1 ET 5'.
+           05  FILLER                        PIC X(79)
+               VALUE 'SAISIR UN CODE CATEGORIE AVANT D''UTILISER LA TOUC
+      -    'HE ENTREE'.
+           05  FILLER                        PIC X(79)
+               VALUE 'SAISIE VALIDEE - ENTREE => CONFIRMATION SUPPRESSIO
+      -    'N ET PF3 => ANNULATION'.
+           05  FILLER                        PIC X(79)
+               VALUE 'CONFIRMATION, SEULES PF VALIDES : ENTREE => CONFIR
+      -    'MATION ET PF3 => ANNULATION'.
+           05  FILLER                        PIC X(79)
+               VALUE 'ENREG. EN COURS DE TRAITEMENT, ATTENDEZ ET POURSUI
+      -    'VEZ L''OPERATION (ENTREE/PF3)'.
+           05  FILLER                        PIC X(79)
+               VALUE 'COMMANDE INVALIDE (QUANTITE DE RETRAIT > QUANTITE
+      -    'EN STOCK DU LOT)'.
+           05  FILLER                        PIC X(79)
+               VALUE 'ENREGISTREMENT MODIFIE'.
+       01  FILLER REDEFINES WS-TABMSG.
+           05  WS-MSG                        PIC X(79)
+                                             OCCURS 48.

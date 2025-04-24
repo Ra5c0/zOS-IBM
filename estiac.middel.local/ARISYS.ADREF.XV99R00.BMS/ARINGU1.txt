@@ -1,0 +1,129 @@
+ARINGU1  DFHMSD TYPE=&SYSPARM,MODE=INOUT,LANG=COBOL,TIOAPFX=YES
+* *********************************************************************
+* MAP MENU
+* *********************************************************************
+* ARIMGU1 MAP DE TAILLE 24X80 (NB LIGNES X NB COLONNES)
+ARIMGU1  DFHMDI SIZE=(24,80),                                          *
+               LINE=1,                                                 *
+               COLUMN=1,                                               *
+               CTRL=(FREEKB,FRSET)
+* TEXTE EN LIGNE 1 COLONNE 1, DE LONGUEUR 45 CARACTERES
+         DFHMDF POS=(01,01),                                           *
+               LENGTH=45,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='FORMATION CICS -            ESTIAC INSTITUT  '
+* TEXTE EN LIGNE 1 COLONNE 62, 6 CARACTERES
+         DFHMDF POS=(01,62),                                           *
+               LENGTH=06,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='DATE :'
+* CHAMP CONTENANT UNE VARIABLE AFFICHANT LA DATE DU JOUR
+MDATE    DFHMDF POS=(01,69),                                           *
+               LENGTH=10,                                              *
+               ATTRB=(ASKIP,BRT)
+* TEXTE EN LIGNE 2 COLONNE 20,36 CARACTERES
+         DFHMDF POS=(02,20),                                           *
+               LENGTH=36,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='===================================='
+* TEXTE EN LIGNE 1 COLONNE 58, 10 CARACTERES
+         DFHMDF POS=(02,58),                                           *
+               LENGTH=10,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='TERMINAL :'
+* VARIABLE AFFICHANT LE TERMINAL DE L'UTILISATEUR
+MTERM    DFHMDF POS=(02,69),                                           *
+               LENGTH=04,                                              *
+               ATTRB=(ASKIP,BRT)
+* TEXTE EN LIGNE 3 COLONNE 61, 7 CARACTèRES
+         DFHMDF POS=(03,61),                                           *
+               LENGTH=07,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='TACHE :'
+* VARIABLE AFFICHANT LE NUMERO DE TACHE DE L'APPLICATION GESTART
+MTASK    DFHMDF POS=(03,69),                                           *
+               LENGTH=07,                                              *
+               ATTRB=(ASKIP,BRT)
+* TEXTE EN LIGNE 4 COLONNE 59, 9 CARACTERES
+         DFHMDF POS=(04,59),                                           *
+               LENGTH=09,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='TRANSID :'
+* VARIABLE AFFICHANT LE NUMERO DE LA TRANSACTION
+MTRAN    DFHMDF POS=(04,69),                                           *
+               LENGTH=04,                                              *
+               ATTRB=(ASKIP,BRT)
+* TEXTE EN LIGNE 5 COLONNE 21, 36 CARACTERES
+         DFHMDF POS=(05,21),                                           *
+               LENGTH=36,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='APPLICATION GESTART - MENU PRINCIPAL'
+* TEXTE EN LIGNE 6 COLONNE 21, 36 CARACTERES
+         DFHMDF POS=(06,21),                                           *
+               LENGTH=36,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='------------------------------------'
+* TEXTE EN LIGNE 10 COLONNE 20, 41 CARACTERES
+         DFHMDF POS=(10,20),                                           *
+               LENGTH=41,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='1 ==> CONSULTATION DIRECTE (CODE ARTICLE)'
+* TEXTE EN LIGNE 11 COLONNE 20, 46 CARACTERES
+         DFHMDF POS=(11,20),                                           *
+               LENGTH=46,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='2 ==> CONSULTATION SEQUENTIELLE (CODE ARTICLE)'
+* TEXTE EN LIGNE 12 COLONNE 20, 48 CARACTERES
+         DFHMDF POS=(12,20),                                           *
+               LENGTH=48,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='3 ==> CONSULTATION SEQUENTIELLE (CODE CATEGORIE*
+               )'
+* TEXTE EN LIGNE 13 COLONNE 20, 27 CARACTERES
+         DFHMDF POS=(13,20),                                           *
+               LENGTH=27,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='4 ==> CREATION D''UN ARTICLE'
+* TEXTE EN LIGNE 14 COLONNE 20, 31 CARACTERES
+         DFHMDF POS=(14,20),                                           *
+               LENGTH=31,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='5 ==> MODIFICATION D''UN ARTICLE'
+* TEXTE EN LIGNE 15 COLONNE 20, 30 CARACTERES
+         DFHMDF POS=(15,20),                                           *
+               LENGTH=30,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='6 ==> SUPPRESSION D''UN ARTICLE'
+* TEXTE EN LIGNE 17 COLONNE 29, 18 CARACTERES
+         DFHMDF POS=(17,29),                                           *
+               LENGTH=18,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='SAISIE DU CHOIX =>'
+* CHAMP PERMETTANT A L'UTILISATEUR D'INDIQUER LE NUMERO DU MENU VOULU
+MCHOIX   DFHMDF POS=(17,48),                                           *
+               LENGTH=01,                                              *
+               ATTRB=(BRT,IC,FSET)
+* TEXTE EN LIGNE 17 COLONNE 50, 2 CARACTERES
+         DFHMDF POS=(17,50),                                           *
+               LENGTH=02,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='<='
+* TEXTE EN LIGNE 21 COLONNE 01, 9 CARACTERES
+         DFHMDF POS=(21,01),                                           *
+               LENGTH=09,                                              *
+               ATTRB=(ASKIP),                                          *
+               INITIAL='MESSAGE :'
+* VARIABLE CONTENANT LE MESSAGE D'ERREUR SI UTILISATEUR UTILISE
+* MAUVAISE TOUCHE FONCTION OU TAPPE UN CHOIX INEXISTANT
+MMSG     DFHMDF POS=(22,01),                                           *
+               LENGTH=79,                                              *
+               ATTRB=(ASKIP,BRT)
+* TEXTE EN LIGNE 24 COLONNE 12, 55 CARACTERES
+         DFHMDF POS=(24,12),                                           *
+               LENGTH=55,                                              *
+               ATTRB=(ASKIP,BRT),                                      *
+               INITIAL='ENTREE => ENVOI SELECTION     PF3 => FIN DE TRA*
+               NSACTION'
+* FIN DU BMS
+         DFHMSD TYPE=FINAL
+         END
